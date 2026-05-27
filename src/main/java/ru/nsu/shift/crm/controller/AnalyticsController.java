@@ -33,7 +33,7 @@ public class AnalyticsController {
      * @param period        DAY | MONTH | QUARTER | YEAR (required)
      * @param referenceDate format: dd-MM-yyyy (optional, defaults to today)
      *
-     * Example: GET /api/analytics/best-seller?period=MONTH&referenceDate=01-03-2024
+     * Example: GET /api/analytics/best-seller?period=MONTH&referenceDate=01-03-2026
      */
     @GetMapping("/best-seller")
     public ResponseEntity<SellerDto> getMostProductiveSeller(
@@ -52,7 +52,7 @@ public class AnalyticsController {
      * @param endDate   format: dd-MM-yyyy (inclusive)
      * @param threshold maximum total amount (exclusive)
      *
-     * Example: GET /api/analytics/sellers-below-threshold?startDate=01-01-2024&endDate=31-03-2024&threshold=5000
+     * Example: GET /api/analytics/sellers-below-threshold?startDate=01-01-2026&endDate=31-12-2026&threshold=5000
      */
     @GetMapping("/sellers-below-threshold")
     public ResponseEntity<List<SellerDto>> getSellersWithTotalBelow(
